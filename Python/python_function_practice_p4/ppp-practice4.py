@@ -3,8 +3,14 @@ def max_num(a,b,c):
     print(max(a,b,c))
 
 # Write a Python function called mult_list() to multiply all the numbers in a list.
-def mult_list(a, b, c):
-    print(a*b*c)
+def mult_list(lst):
+    if len(lst) == 0:
+        return 0
+    prod = lst[0]
+    if len(lst) > 1:
+        for i in lst[1:]:
+            prod = prod * i
+    return print(prod)
 
 # Write a Python function called rev_string() to reverse a string.
 def rev_string(string):
@@ -53,7 +59,7 @@ def pascal(n):
 
 
 max_num(2,6,9)
-mult_list(2,6,9)
+mult_list([2, 6, 9])
 rev_string("hello")
 num_within(2,6,9)
 pascal(2)
